@@ -1,5 +1,5 @@
 import consts from "./consts";
 
-export {
-    consts
-}
+export * from "./types";
+
+export { consts };
