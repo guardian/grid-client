@@ -2,7 +2,7 @@
   "name": "@guardian/grid-client",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
+  "main": "lib/index.js",
   "scripts": {
     "lint": "tslint -p tsconfig.json",
     "format": "prettier --write \"src/**/*.{ts,js}\"",
