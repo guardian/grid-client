@@ -23,4 +23,8 @@ type ArgoEntity<T> = {
   links?: ArgoLink[];
 };
 
-export { ArgoMethod, ArgoAction, ArgoLink, ArgoEntity };
+type DataEntity<T> = {
+  data: T;
+};
+
+export { ArgoMethod, ArgoAction, ArgoLink, ArgoEntity, DataEntity };

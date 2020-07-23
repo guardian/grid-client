@@ -5,7 +5,7 @@ import { Usage } from "./usage";
 import { Leases } from "./lease";
 import { Collection } from "./collection";
 import { SyndicationRights } from "./syndication-rights";
-import { ArgoEntity } from "./argo";
+import { ArgoEntity, DataEntity } from "./argo";
 
 enum Cost {
   Free = "free",
@@ -50,7 +50,7 @@ type UploadInfo = {
   filename?: string;
 };
 
-type Image = ArgoEntity<{
+type GridImage = ArgoEntity<{
   id: string;
   uploadTime: Date;
   uploadedBy: string;
@@ -79,4 +79,9 @@ type Image = ArgoEntity<{
   syndicationStatus: SyndicationStatus;
 }>;
 
-export { Cost, PersistedReasons, Persisted, SyndicationRights, Identifiers, UploadInfo, Image };
+type CropSelection = {
+  crop: DataEntity<Crop>;
+  image: DataEntity<GridImage>;
+};
+
+export { Cost, PersistedReasons, Persisted, SyndicationRights, Identifiers, UploadInfo, GridImage, CropSelection };
