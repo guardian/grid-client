@@ -1,7 +1,7 @@
-import { CropSelection } from "../types";
+import { PostMessage } from "../types";
 
-export default function (payload: any): CropSelection | undefined {
-  const image = payload as CropSelection;
+export default function (payload: any): PostMessage | undefined {
+  const image = payload as PostMessage;
 
   const hasRequiredProperties =
     image.crop && image.crop.data && image.crop.data.master && image.image && image.image.data;

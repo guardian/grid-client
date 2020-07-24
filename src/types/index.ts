@@ -5,6 +5,7 @@ export * from "./crop";
 export * from "./image";
 export * from "./lease";
 export * from "./metadata";
+export * from "./post-message";
 export * from "./syndication-rights";
 export * from "./usage";
 export * from "./usage-metadata";

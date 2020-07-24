@@ -91,19 +91,4 @@ type ArgoGridImage = ArgoEntity<
   }
 >;
 
-type CropSelection = {
-  crop: DataEntity<Crop>;
-  image: DataEntity<GridImage>;
-};
-
-export {
-  Cost,
-  PersistedReasons,
-  Persisted,
-  SyndicationRights,
-  Identifiers,
-  UploadInfo,
-  GridImage,
-  CropSelection,
-  ArgoGridImage,
-};
+export { Cost, PersistedReasons, Persisted, SyndicationRights, Identifiers, UploadInfo, GridImage, ArgoGridImage };
