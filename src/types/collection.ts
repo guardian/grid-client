@@ -5,11 +5,11 @@ type ActionData = {
   date: Date;
 };
 
-type Collection = ArgoEntity<{
+type Collection = {
   path: string[];
   pathId: string;
   actionData: ActionData;
   description: string;
-}>;
+};
 
 export { ActionData, Collection };

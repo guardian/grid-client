@@ -11,28 +11,24 @@ export const postMessageData = {
         filename: "ANIMALS_Elephant_11138514.jpg",
       },
       source: {
-        file:
-          "http://media-service-test-imagebucket-1qt2lbcwnpgl0.s3.amazonaws.com/a/8/2/0/a/d/a820ad09876754cae2b1d44da01d0d9f8a83749d",
+        file: "http://media-service-imagebucket.grid.local/a/8/2/0/a/d/a820ad09876754cae2b1d44da01d0d9f8a83749d",
         size: 0,
         mimeType: "image/jpeg",
         dimensions: {
           width: 1914,
           height: 1314,
         },
-        secureUrl:
-          "https://media-service-test-imagebucket-1qt2lbcwnpgl0.s3.amazonaws.com/a/8/2/0/a/d/a820ad09876754cae2b1d44da01d0d9f8a83749d",
+        secureUrl: "https://media-service-imagebucket.grid.local/a/8/2/0/a/d/a820ad09876754cae2b1d44da01d0d9f8a83749d",
       },
       thumbnail: {
-        file:
-          "http://media-service-test-thumbbucket-1sm53rniszbqf.s3.amazonaws.com/a/8/2/0/a/d/a820ad09876754cae2b1d44da01d0d9f8a83749d",
+        file: "http://media-service-thumbbucket.grid.local/a/8/2/0/a/d/a820ad09876754cae2b1d44da01d0d9f8a83749d",
         size: 14743,
         mimeType: "image/jpeg",
         dimensions: {
           width: 256,
           height: 176,
         },
-        secureUrl:
-          "https://media-service-test-thumbbucket-1sm53rniszbqf.s3.amazonaws.com/a/8/2/0/a/d/a820ad09876754cae2b1d44da01d0d9f8a83749d",
+        secureUrl: "https://media-service-thumbbucket.grid.local/a/8/2/0/a/d/a820ad09876754cae2b1d44da01d0d9f8a83749d",
       },
       fileMetadata: {},
       metadata: {

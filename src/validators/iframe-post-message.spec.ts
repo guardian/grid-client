@@ -13,8 +13,16 @@ test("validation of nonsense data", () => {
   expect(validate(123)).toBeUndefined();
 });
 
-test("validation of real data", () => {
-  expect(validate(postMessageData)).toBeDefined();
+test("can extract image id and url to master crop from real postMessage data", () => {
+  const validated = validate(postMessageData);
+
+  expect(validated).toBeDefined();
+
+  expect(validated.image.data.id).toEqual("a820ad09876754cae2b1d44da01d0d9f8a83749d");
+
+  expect(validated.crop.data.master?.secureUrl.toString()).toEqual(
+    "https://media-origin.grid.local/a820ad09876754cae2b1d44da01d0d9f8a83749d/233_0_1315_1314/master/1315.jpg"
+  );
 });
 
 test("validation of close data", () => {

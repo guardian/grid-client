@@ -39,12 +39,20 @@ type Photoshoot = {
 // TODO be better!
 type UsageRights = any;
 
-type UserMetadata = ArgoEntity<{
+type UserMetadata = {
+  archived: boolean;
+  labels: string[];
+  metadata: ImageMetadata;
+  usageRights?: UsageRights;
+  photoshoot?: Photoshoot;
+};
+
+type ArgoUserMetadata = ArgoEntity<{
   archived: ArgoEntity<boolean>;
-  labels: ArgoEntity<string>;
+  labels: ArgoEntity<ArgoEntity<string>[]>;
   metadata: ArgoEntity<ImageMetadata>;
   usageRights?: ArgoEntity<UsageRights>;
   photoshoot?: ArgoEntity<Photoshoot>;
 }>;
 
-export { FileMetadata, ImageMetadata, UsageRights, UserMetadata };
+export { FileMetadata, ImageMetadata, UsageRights, UserMetadata, ArgoUserMetadata };

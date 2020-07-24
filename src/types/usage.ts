@@ -38,7 +38,7 @@ enum UsageStatus {
   Unknown = "unknown",
 }
 
-type Usage = ArgoEntity<{
+type Usage = {
   id: string;
   references: UsageReference[];
   platform: UsageType;
@@ -52,6 +52,6 @@ type Usage = ArgoEntity<{
   syndicationUsageMetadata?: SyndicationUsageMetadata;
   frontUsageMetadata?: FrontUsageMetadata;
   downloadUsageMetadata?: DownloadUsageMetadata;
-}>;
+};
 
 export { UsageReferenceType, UsageReference, UsageType, UsageStatus, Usage };

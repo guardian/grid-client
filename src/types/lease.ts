@@ -18,9 +18,9 @@ type MediaLease = {
   createdAt: Date;
 };
 
-type Leases = ArgoEntity<{
+type Leases = {
   leases: MediaLease[];
   lastModified?: Date;
-}>;
+};
 
 export { MediaLeaseType, MediaLease, Leases };
