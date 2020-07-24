@@ -2,7 +2,7 @@ import { Asset } from "./asset";
 import { FileMetadata, ImageMetadata, UserMetadata, UsageRights, ArgoUserMetadata } from "./metadata";
 import { Crop } from "./crop";
 import { Usage } from "./usage";
-import { Leases, ArgoLeases } from "./lease";
+import { Leases } from "./lease";
 import { Collection } from "./collection";
 import { SyndicationRights } from "./syndication-rights";
 import { ArgoEntity, DataEntity } from "./argo";
