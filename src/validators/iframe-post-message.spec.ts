@@ -1,5 +1,5 @@
 import validate from "./iframe-post-message";
-import { postMessageData } from "../__fixtures__/post-message";
+import { postMessageData } from "~__fixtures__/post-message";
 
 test("validation of bad data", () => {
   const input = {
