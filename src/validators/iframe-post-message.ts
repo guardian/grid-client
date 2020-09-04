@@ -1,4 +1,4 @@
-import { PostMessage } from "../types";
+import { PostMessage } from "~types";
 
 export default function (payload: any): PostMessage | undefined {
   const image = payload as PostMessage;

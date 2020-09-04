@@ -3,14 +3,19 @@
       "target": "es5",
       "module": "commonjs",
       "declaration": true,
-      "outDir": "./lib"
+      "outDir": "./lib",
+      "strict": true,
+      "baseUrl": "./src",
+      "paths": {
+        "~*": ["./*"]
+      }
     },
     "include": [
-        "src"
+        "src/**/*"
     ],
     "exclude": [
         "node_modules",
-        "**/*.spec.ts",
-        "**/__fixtures__/**"
+        "src/**/*.spec.ts",
+        "src/**/__fixtures__/**"
     ]
 }
