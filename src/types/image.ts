@@ -5,7 +5,7 @@ import { Usage } from "./usage";
 import { Leases } from "./lease";
 import { Collection } from "./collection";
 import { SyndicationRights } from "./syndication-rights";
-import { ArgoEntity, DataEntity } from "./argo";
+import { ArgoEntity } from "./argo";
 
 enum Cost {
   Free = "free",

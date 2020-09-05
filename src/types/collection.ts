@@ -1,5 +1,3 @@
-import { ArgoEntity } from "./argo";
-
 type ActionData = {
   author: string;
   date: Date;

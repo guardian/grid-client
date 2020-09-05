@@ -1,14 +1,14 @@
 import { ArgoEntity } from "./argo";
 
 type FileMetadata = {
-  iptc: object;
-  exif: object;
-  exifSub: object;
-  xmp: object;
-  icc: object;
-  getty: object;
+  iptc: any;
+  exif: any;
+  exifSub: any;
+  xmp: any;
+  icc: any;
+  getty: any;
   colourModel?: string;
-  colourModelInformation: object;
+  colourModelInformation: any;
 };
 
 type ImageMetadata = {

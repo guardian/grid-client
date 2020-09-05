@@ -5,7 +5,6 @@ import {
   FrontUsageMetadata,
   DownloadUsageMetadata,
 } from "./usage-metadata";
-import { ArgoEntity } from "./argo";
 
 enum UsageReferenceType {
   InDesign = "indesign",

@@ -1,5 +1,3 @@
-import { ArgoEntity } from "./argo";
-
 enum MediaLeaseType {
   AllowUse = "allow-use",
   DenyUse = "deny-use",
