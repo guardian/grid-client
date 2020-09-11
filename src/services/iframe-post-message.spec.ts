@@ -29,11 +29,11 @@ test("validation of close data", () => {
 });
 
 test("can extract image id and url to master crop from real postMessage data", () => {
-  const iframeService = new IframePostMessageService(iframePostMessageData);
+  const iframeService = IframePostMessageService.withConsoleLogger(iframePostMessageData);
   expect(iframeService.isValid).toBe(true);
   expect(iframeService.imageId).toEqual("a820ad09876754cae2b1d44da01d0d9f8a83749d");
 
-  // expect(validated?.crop.data.master?.secureUrl?.toString()).toEqual(
-  //   "https://media-origin.grid.local/a820ad09876754cae2b1d44da01d0d9f8a83749d/233_0_1315_1314/master/1315.jpg"
-  // );
+  expect(iframeService.highestQualityImageURL).toEqual(
+    new URL("https://media-origin.grid.local/a820ad09876754cae2b1d44da01d0d9f8a83749d/233_0_1315_1314/master/1315.jpg")
+  );
 });
