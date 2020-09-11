@@ -1,2 +1,2 @@
 export * from "~types";
-export * as Validators from "~validators";
+export * from "~services";
