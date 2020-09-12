@@ -32,5 +32,12 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "fp-ts": "^2.8.2",
+    "io-ts": "^2.2.10",
+    "io-ts-types": "^0.5.10",
+    "monocle-ts": "^2.3.3",
+    "newtype-ts": "^0.3.4"
   }
 }
