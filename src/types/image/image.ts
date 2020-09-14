@@ -13,7 +13,7 @@ import { Lease } from "../lease";
 import { ArgoEntity, DataEntity } from "../argo";
 import { Asset } from "../asset";
 import { Crop } from "../crop";
-import { Collection } from "../collection";
+import { BrokenCollection, Collection } from "../collection";
 import { SyndicationRights, SyndicationStatus } from "../syndication";
 import { EmptyUsage, Usage } from "../usage";
 
@@ -56,7 +56,10 @@ const GridImage = t.intersection([
   baseImage,
   t.type({
     leases: Lease,
-    collections: t.readonlyArray(Collection),
+
+    // TODO correct this after https://github.com/guardian/grid/issues/3005 is resolved
+    collections: t.union([t.readonlyArray(Collection), t.readonlyArray(BrokenCollection)]),
+
     usages: t.union([EmptyUsage, DataEntity(DataEntity(Usage))]),
   }),
   t.partial({
@@ -71,7 +74,10 @@ const ArgoGridImage = ArgoEntity(
     baseImage,
     t.type({
       leases: ArgoEntity(Lease),
-      collections: ArgoEntity(t.readonlyArray(Collection)),
+
+      // TODO correct this after https://github.com/guardian/grid/issues/3005 is resolved
+      collections: t.union([t.readonlyArray(ArgoEntity(Collection)), t.readonlyArray(BrokenCollection)]),
+
       usages: t.union([EmptyUsage, ArgoEntity(DataEntity(t.readonlyArray(Usage)))]),
     }),
     t.partial({
