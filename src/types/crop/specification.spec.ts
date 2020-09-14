@@ -1,6 +1,6 @@
-import { Specification } from "./specification";
 import { isRight } from "fp-ts/Either";
-import cropData from "~__fixtures__/crop-data";
+import { Specification } from "./specification";
+import cropData from "../../__fixtures__/crop-data";
 
 test("decoding a crop specification", () => {
   const parsed = Specification.decode(cropData.specification);

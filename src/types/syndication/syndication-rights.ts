@@ -1,7 +1,7 @@
 import * as t from "io-ts";
 import { DateFromISOString } from "io-ts-types";
-import { Supplier } from "./supplier";
 import { Right } from "./right";
+import { Supplier } from "./supplier";
 
 const SyndicationRights = t.intersection([
   t.type({

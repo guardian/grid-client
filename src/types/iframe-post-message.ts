@@ -1,7 +1,7 @@
 import * as t from "io-ts";
-import { DataEntity } from "~/types/argo";
-import { Crop } from "~/types/crop";
-import { GridImage } from "~/types/image";
+import { DataEntity } from "./argo";
+import { Crop } from "./crop";
+import { GridImage } from "./image";
 
 const IframePostMessage = t.type({
   crop: DataEntity(Crop),

@@ -1,9 +1,9 @@
-import { IframePostMessage } from "~types";
-import { either, isRight } from "fp-ts/Either";
-import Service from "~services/service";
-import { CropService } from "~services/crop";
 import { PathReporter } from "io-ts/PathReporter";
-import Logger from "~utils/logger";
+import { either, isRight } from "fp-ts/Either";
+import { IframePostMessage } from "../types";
+import Service from "./service";
+import { CropService } from "./crop";
+import { Logger } from "../utils";
 
 class IframePostMessageService extends Service<IframePostMessage> {
   isValid: boolean;

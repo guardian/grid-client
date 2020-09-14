@@ -1,20 +1,21 @@
 import * as t from "io-ts";
 import { DateFromISOString } from "io-ts-types";
+
 import { Identifier } from "./identifiers";
 import { UploadInfo } from "./upload-info";
-import { Asset } from "~types/asset";
 import { FileMetadata, ImageMetadata } from "./metadata";
-import { Crop } from "~types/crop";
-import { SyndicationRights, SyndicationStatus } from "~types/syndication";
-import { InvalidReason } from "~types/image/invalid-reason";
+import { InvalidReason } from "./invalid-reason";
 import { Cost } from "./cost";
 import { Persisted } from "./persisted";
-import { Lease } from "~types/lease";
-import { Collection } from "~types/collection";
-import { Usage } from "~types/usage";
 import { UserMetadata } from "./metadata";
-import { ArgoEntity, DataEntity } from "~/types/argo";
-import { EmptyUsage } from "~types/usage/empty-usage";
+import { Lease } from "../lease";
+
+import { ArgoEntity, DataEntity } from "../argo";
+import { Asset } from "../asset";
+import { Crop } from "../crop";
+import { Collection } from "../collection";
+import { SyndicationRights, SyndicationStatus } from "../syndication";
+import { EmptyUsage, Usage } from "../usage";
 
 // TODO be better!
 const UsageRights = t.unknown;

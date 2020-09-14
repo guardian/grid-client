@@ -1,5 +1,5 @@
 import { IframePostMessageService } from "./iframe-post-message";
-import iframePostMessageData from "~__fixtures__/iframe-post-message-data";
+import iframePostMessageData from "../__fixtures__/iframe-post-message-data";
 
 test("validation of bad data", () => {
   const input = new MessageEvent("*", {

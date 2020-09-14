@@ -1,5 +1,5 @@
 import * as t from "io-ts";
-import URLFromString from "~types/io-ts/URLFromString";
+import URLFromString from "../io-ts/URLFromString";
 
 const ArgoLink = t.type({
   rel: t.string,

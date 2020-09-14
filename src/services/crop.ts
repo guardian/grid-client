@@ -1,8 +1,9 @@
-import { PathReporter } from "io-ts/PathReporter";
-import Service from "~services/service";
-import { Asset, Crop } from "~types";
 import { either, isRight } from "fp-ts/Either";
-import Logger from "~utils/logger";
+import { PathReporter } from "io-ts/PathReporter";
+import Service from "./service";
+import { Asset } from "../types/asset";
+import { Crop } from "../types/crop";
+import { Logger } from "../utils";
 
 class CropService extends Service<Crop> {
   isValid: boolean;

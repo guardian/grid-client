@@ -1,5 +1,5 @@
 import * as t from "io-ts";
-import URLFromString from "~types/io-ts/URLFromString";
+import URLFromString from "../io-ts/URLFromString";
 import { ArgoMethod } from "./method";
 
 const ArgoAction = t.type({

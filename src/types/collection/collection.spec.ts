@@ -1,5 +1,5 @@
-import { Collection } from "./collection";
 import { either, isLeft, isRight } from "fp-ts/Either";
+import { Collection } from "./collection";
 
 test("valid input", () => {
   const data = Collection.decode({

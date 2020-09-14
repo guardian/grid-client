@@ -1,7 +1,6 @@
 import * as t from "io-ts";
-import { ImageMetadata } from "./image-metadata";
-import { Photoshoot } from "./photoshoot";
-import { ArgoEntity } from "~types";
+import { ImageMetadata, Photoshoot } from "./";
+import { ArgoEntity } from "../../argo";
 
 const UserMetadata = t.partial({
   archived: t.boolean,
