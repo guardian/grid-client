@@ -1,7 +1,7 @@
 import * as t from "io-ts";
 
 import { ReferenceType } from "./reference-type";
-import URLFromString from "~types/io-ts/URLFromString";
+import URLFromString from "../io-ts/URLFromString";
 
 const UsageReference = t.intersection([
   t.type({

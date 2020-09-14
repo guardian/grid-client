@@ -1,5 +1,5 @@
-import { ActionData } from "./action-data";
 import { either, isLeft, isRight } from "fp-ts/Either";
+import { ActionData } from "./action-data";
 
 test("valid input", () => {
   const data = ActionData.decode({

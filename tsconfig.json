@@ -4,11 +4,7 @@
       "module": "commonjs",
       "declaration": true,
       "outDir": "./lib",
-      "strict": true,
-      "baseUrl": "./src",
-      "paths": {
-        "~*": ["./*"]
-      }
+      "strict": true
     },
     "include": [
         "src/**/*"

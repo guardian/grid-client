@@ -1,5 +1,5 @@
 import { CropService } from "./crop";
-import CropData, { cropWithoutMaster, cropWithoutMasterOrAssetSize } from "~__fixtures__/crop-data";
+import CropData, { cropWithoutMaster, cropWithoutMasterOrAssetSize } from "../__fixtures__/crop-data";
 
 test("extraction of highest quality assest", () => {
   const cropService = new CropService(CropData);

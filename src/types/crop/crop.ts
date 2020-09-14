@@ -1,7 +1,7 @@
 import * as t from "io-ts";
 import { DateFromISOString } from "io-ts-types";
 import { Specification } from "./specification";
-import { Asset } from "~types/asset";
+import { Asset } from "../asset";
 
 const Crop = t.intersection([
   t.type({

@@ -1,8 +1,8 @@
 import * as t from "io-ts";
-import URLFromString from "~types/io-ts/URLFromString";
+import { IntersectionC, KeyofC, Mixed, PartialC, ReadonlyArrayC, StringC, Type, TypeC } from "io-ts";
+import URLFromString from "../io-ts/URLFromString";
 import { ArgoAction } from "./action";
 import { ArgoLink } from "./link";
-import { IntersectionC, KeyofC, Mixed, PartialC, ReadonlyArrayC, StringC, Type, TypeC } from "io-ts";
 
 const ArgoEntity: <C extends Mixed>(
   codec: C
@@ -27,7 +27,5 @@ const ArgoEntity: <C extends Mixed>(
       links: t.readonlyArray(ArgoLink),
     }),
   ]);
-
-// type ArgoEntity = t.TypeOf<typeof ArgoEntity>;
 
 export { ArgoEntity };

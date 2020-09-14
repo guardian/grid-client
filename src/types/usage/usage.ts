@@ -1,8 +1,8 @@
 import * as t from "io-ts";
 import { DateFromISOString } from "io-ts-types";
 import { UsageReference } from "./reference";
-import { UsageType } from "./usage-type";
 import { UsageStatus } from "./usage-status";
+import { UsageType } from "./usage-type";
 
 import {
   PrintUsageMetadata,

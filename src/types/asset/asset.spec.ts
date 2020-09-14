@@ -1,5 +1,5 @@
-import { Asset } from "./asset";
 import { isRight } from "fp-ts/Either";
+import { Asset } from "./asset";
 
 test("foo", () => {
   const data = {

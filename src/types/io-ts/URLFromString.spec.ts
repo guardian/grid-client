@@ -1,5 +1,5 @@
-import URLFromString from "./URLFromString";
 import { either, isLeft, isRight } from "fp-ts/Either";
+import URLFromString from "./URLFromString";
 
 test("valid input", () => {
   const value = URLFromString.decode("https://a.domain.com/path/to/resource");

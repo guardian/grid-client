@@ -1,5 +1,5 @@
-import { Lease } from "./lease";
 import { isRight } from "fp-ts/Either";
+import { Lease } from "./lease";
 
 test("blah", () => {
   const parsed = Lease.decode({});
