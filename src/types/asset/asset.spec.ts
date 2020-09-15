@@ -1,7 +1,7 @@
 import { isRight } from "fp-ts/Either";
 import { Asset } from "./asset";
 
-test("foo", () => {
+test("decoding an asset", () => {
   const data = {
     file: "https://media-origin.grid.local/a820ad09876754cae2b1d44da01d0d9f8a83749d/233_0_1315_1314/1315.jpg",
     size: 351690,

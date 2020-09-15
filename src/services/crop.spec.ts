@@ -1,8 +1,12 @@
 import { CropService } from "./crop";
-import CropData, { cropWithoutMaster, cropWithoutMasterOrAssetSize } from "../__fixtures__/crop-data";
+import {
+  standardCrop,
+  legacyFormat__missingMaster,
+  legacyFormat__missingMasterAndAssetSize,
+} from "./__fixtures__/crop";
 
-test("extraction of highest quality assest", () => {
-  const cropService = new CropService(CropData);
+test("extraction of highest quality asset", () => {
+  const cropService = new CropService(standardCrop);
   expect(cropService.isValid).toBe(true);
 
   const highestQualityAsset = cropService.highestQualityAsset!;
@@ -24,7 +28,7 @@ test("extraction of highest quality assest", () => {
 });
 
 test("extraction of highest quality asset when no master", () => {
-  const cropService = CropService.withConsoleLogger(cropWithoutMaster);
+  const cropService = CropService.withConsoleLogger(legacyFormat__missingMaster);
 
   expect(cropService.isValid).toBe(true);
 
@@ -45,7 +49,7 @@ test("extraction of highest quality asset when no master", () => {
 });
 
 test("extraction of highest quality asset when no master or sizes", () => {
-  const cropService = CropService.withConsoleLogger(cropWithoutMasterOrAssetSize);
+  const cropService = CropService.withConsoleLogger(legacyFormat__missingMasterAndAssetSize);
 
   expect(cropService.isValid).toBe(true);
 

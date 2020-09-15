@@ -1,4 +1,4 @@
-export default {
+const image = {
   id: "a820ad09876754cae2b1d44da01d0d9f8a83749d",
   uploadTime: "2020-03-20T11:16:11.196Z",
   uploadedBy: "pa",
@@ -77,3 +77,5 @@ export default {
   },
   syndicationStatus: "unsuitable",
 };
+
+export { image };
