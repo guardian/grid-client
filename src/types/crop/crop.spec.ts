@@ -1,8 +1,8 @@
 import { isRight } from "fp-ts/Either";
 import { Crop } from "./crop";
-import cropData from "../../__fixtures__/crop-data";
+import { standardCrop } from "./__fixtures__/crop";
 
 test("decoding a crop", () => {
-  const parsed = Crop.decode(cropData);
+  const parsed = Crop.decode(standardCrop);
   expect(isRight(parsed)).toBe(true);
 });

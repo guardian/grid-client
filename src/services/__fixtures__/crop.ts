@@ -1,6 +1,6 @@
-const valid = {
+const standardCrop = {
   id: "233_0_1315_1314",
-  author: "akash.askoolum@guardian.co.uk",
+  author: "foo.bar@guardian.co.uk",
   date: "2020-07-23T22:29:09.110Z",
   specification: {
     uri: "https://api.grid.local/images/a820ad09876754cae2b1d44da01d0d9f8a83749d",
@@ -68,9 +68,9 @@ const valid = {
   ],
 };
 
-const cropWithoutMaster = {
+const legacyFormat__missingMaster = {
   id: "233_0_1315_1314",
-  author: "akash.askoolum@guardian.co.uk",
+  author: "foo.bar@guardian.co.uk",
   date: "2020-07-23T22:29:09.110Z",
   specification: {
     uri: "https://api.grid.local/images/a820ad09876754cae2b1d44da01d0d9f8a83749d",
@@ -127,9 +127,9 @@ const cropWithoutMaster = {
   ],
 };
 
-const cropWithoutMasterOrAssetSize = {
+const legacyFormat__missingMasterAndAssetSize = {
   id: "233_0_1315_1314",
-  author: "akash.askoolum@guardian.co.uk",
+  author: "foo.bar@guardian.co.uk",
   date: "2020-07-23T22:29:09.110Z",
   specification: {
     uri: "https://api.grid.local/images/a820ad09876754cae2b1d44da01d0d9f8a83749d",
@@ -182,6 +182,4 @@ const cropWithoutMasterOrAssetSize = {
   ],
 };
 
-export { cropWithoutMaster, cropWithoutMasterOrAssetSize };
-
-export default valid;
+export { standardCrop, legacyFormat__missingMaster, legacyFormat__missingMasterAndAssetSize };

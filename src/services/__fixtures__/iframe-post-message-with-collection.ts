@@ -5,7 +5,7 @@ export default new MessageEvent("*", {
       data: {
         id: "c1e59b35a6b63d566b712f12764c02188c556d86",
         uploadTime: "2020-09-14T12:28:24.289Z",
-        uploadedBy: "akash.askoolum@guardian.co.uk",
+        uploadedBy: "foo.bar@guardian.co.uk",
         lastModified: "2020-09-14T12:46:22.768Z",
         identifiers: {},
         uploadInfo: { filename: "30d70178150589.5c9c3b3a9a0a3.png" },
@@ -45,7 +45,7 @@ export default new MessageEvent("*", {
         exports: [
           {
             id: "0_0_1920_1428",
-            author: "akash.askoolum@guardian.co.uk",
+            author: "foo.bar@guardian.co.uk",
             date: "2020-09-14T13:29:21.781+01:00",
             specification: {
               uri: "https://api.media.local.dev-gutools.co.uk/images/c1e59b35a6b63d566b712f12764c02188c556d86",
@@ -106,7 +106,7 @@ export default new MessageEvent("*", {
     crop: {
       data: {
         id: "0_0_1920_1428",
-        author: "akash.askoolum@guardian.co.uk",
+        author: "foo.bar@guardian.co.uk",
         date: "2020-09-14T12:29:21.781Z",
         specification: {
           uri: "https://api.media.local.dev-gutools.co.uk/images/c1e59b35a6b63d566b712f12764c02188c556d86",
