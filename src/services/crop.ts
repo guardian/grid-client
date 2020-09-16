@@ -1,17 +1,16 @@
 import { either, isRight } from "fp-ts/Either";
-import { PathReporter } from "io-ts/PathReporter";
 import Service from "./service";
 import { Asset } from "../types/asset";
 import { Crop } from "../types/crop";
-import { Logger } from "../utils";
+import { Reporter } from "../utils";
 
 class CropService extends Service<Crop> {
   isValid: boolean;
   protected data?: Crop;
-  protected logger?: Logger;
+  protected reporter?: Reporter;
 
-  constructor(payload: unknown, logger: Logger | undefined = undefined) {
-    super(logger);
+  constructor(payload: unknown, reporter: Reporter | undefined = undefined) {
+    super(reporter);
 
     if (Crop.is(payload)) {
       this.isValid = true;
@@ -24,13 +23,9 @@ class CropService extends Service<Crop> {
       if (this.isValid) {
         either.map(parsed, (data: Crop) => (this.data = data));
       } else {
-        this.logger?.log(PathReporter.report(parsed));
+        this.reporter?.log(parsed);
       }
     }
-  }
-
-  static withConsoleLogger(payload: unknown): CropService {
-    return new CropService(payload, console);
   }
 
   get highestQualityAsset(): Asset | null {

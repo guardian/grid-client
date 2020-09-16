@@ -1,6 +1,7 @@
 import { IframePostMessageService } from "./iframe-post-message";
 import iframePostMessageData from "./__fixtures__/iframe-post-message";
 import iframePostMessageDataWithCollection from "./__fixtures__/iframe-post-message-with-collection";
+import { Reporter } from "../utils";
 
 test("validation of bad data", () => {
   const input = new MessageEvent("*", {
@@ -30,7 +31,7 @@ test("validation of close data", () => {
 });
 
 test("can extract image id and url to master crop from real postMessage data", () => {
-  const iframeService = IframePostMessageService.withConsoleLogger(iframePostMessageData);
+  const iframeService = new IframePostMessageService(iframePostMessageData, Reporter.default);
   expect(iframeService.isValid).toBe(true);
   expect(iframeService.imageId).toEqual("a820ad09876754cae2b1d44da01d0d9f8a83749d");
 
@@ -40,7 +41,7 @@ test("can extract image id and url to master crop from real postMessage data", (
 });
 
 test("can parse a post message response for an image with collections", () => {
-  const iframeService = IframePostMessageService.withConsoleLogger(iframePostMessageDataWithCollection);
+  const iframeService = new IframePostMessageService(iframePostMessageDataWithCollection, Reporter.default);
   expect(iframeService.isValid).toBe(true);
   expect(iframeService.highestQualityImageURL).toEqual(
     new URL(
