@@ -1,12 +1,12 @@
-import { Logger } from "../utils";
+import { Reporter } from "../utils";
 
 abstract class Service<T> {
   abstract isValid: boolean;
   protected data?: T;
-  protected logger?: Logger;
+  protected reporter?: Reporter;
 
-  protected constructor(logger?: Logger) {
-    this.logger = logger;
+  protected constructor(reporter?: Reporter) {
+    this.reporter = reporter;
   }
 }
 
